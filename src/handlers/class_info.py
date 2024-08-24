@@ -15,6 +15,8 @@ def extract_prerequisite(course_description):
     prerequisites = re.search(prereq_regex, course_description)
     prerequisites = prerequisites.group(1).strip() if prerequisites else "None"
 
+    return prerequisites
+
 
 def extract_description(course_description):
     description_regex = (
