@@ -24,7 +24,9 @@ undergraduate_courses = []
 #     undergraduate_courses += all_courses[key]['Undergraduate']
 
 
-undergraduate_courses += all_courses['CSCE']['Undergraduate']
+for course in all_courses['CSCE']['Undergraduate']:
+    if int(course['Course Number']) >= 300: # only upper division
+        undergraduate_courses.append(course)
 
 # print(len(undergraduate_courses))
 
